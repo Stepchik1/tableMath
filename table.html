@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="design/cell.css" rel="stylesheet">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>3x3 Grid</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* Выравнивание по центру */
+            align-items: center;
+            height: 100vh; /* Занимает всю высоту экрана */
+            margin: 0;
+            background-color: #f0f0f0; /* Светлый фон */
+        }
+
+        /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+        .blurred {
+            filter: blur(5px);
+            transition: filter 1s;
+        }
+       
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+    </style>
+</head>
+
+    
+
+<body>
+    <div class="grid">
+        <div class="cell" id="text1"><span class="formula rotate">\[\begin{align}&\overrightarrow{{{\tau }_{0}}}=(\cos\alpha,\cos\beta,\cos\gamma )\\ &\\ \end{align}\]</span></div>
+        <div class="cell one">
+            <div class="top" id="text2">
+               
+                    <span class="formula">\[\begin{align}
+                        & \int\limits_{AB}^{{}}{(P\cos \alpha }+Q\cos \beta +R\cos \gamma )dl= 
+                        &  \\ 
+                        \end{align}\]</span>
+              
+            </div>
+            <div class="divider"></div>
+            <div class="bottom" id="text3">
+               
+                    <span class="formula">\begin{align}
+                        & =\int\limits_{AB}^{{}}{Pdx+Qdy+Rdz}  &  \\ 
+                        \end{align}</span> 
+               
+            </div>
+        </div>
+        
+        <div class="cell sixteen" id="text4"> <button id="blurButton1">Ки1</button></div>
+        <div class="cell two" id="text5"><span class ="formula">\[\int\limits_{AB}^{{}}{fdl=\int\limits_{a}^{b}{f\cdot \sqrt{{{(\varphi ')}^{2}}+{{(\psi ')}^{2}}+{{(\chi ')}^{2}}}}}dt\]</span></div>
+        <div class="cell three" id="text6"> <button id="blurButton2">R1</button></div>
+        <div class="cell four" id="text7" >Ки2</div>
+        <div class="cell five " id="text8">7</div>
+        <div class="cell six" id="text9">
+            <span class="rotate2">\[\begin{align}&\overrightarrow{{{\tau }_{0}}}=(\cos\alpha,\cos\beta,\cos\gamma )\\ &\\ \end{align}\]</span>
+        </div>
+        <div class="cell seven" id="">
+           
+            <div class="top" id="text10" >
+               
+                    <span class="formula">\[\beg</span>
+              
+            </div>
+            <div class="divider"></div>
+            <div class="bottom" id="text11">
+               
+                    <span class="formula">
+                      /span> 
+                    </span>
+            </div>
+        
+    </div>
+        <div class="cell eaght" id="text12">10</div>
+        <div class="cell nine" id="text13">R2</div>
+        <div class="cell ten" id="text14">Пи1</div>
+        <div class="cell eleven" id="text15">13</div>
+        <div class="cell twelve" >
+            <div class="top" id="text16">
+               
+            <span class="formula">\[\beg</span>
+      
+            </div>
+                 <div class="divider"></div>
+                    <div class="bottom" id="text17">
+       
+                <span class="formula">
+              /span> 
+            </span>
+        </div>
+    </div>
+        <div class="cell thirteen" id="text18">Пи2</div>
+        <div class="cell fourteen" id="text19">16</div>
+        <div class="cell fifteen" id="text20">17</div>
+        <div class="cell" id="text21">R3</div>
+
+    </div>
+    <script src="blur/Pi1.js" ></script>
+    <script src="blur/R1.js" ></script>
+</body>
+</html>

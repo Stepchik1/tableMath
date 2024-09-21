@@ -1,0 +1,188 @@
+/* Замена радиуса границ для первой ячейки */
+
+.grid {
+    display: grid;
+    grid-template-columns: 0.35fr 1fr 1fr 0.3fr 1fr 1fr 0.3fr; 
+    grid-template-rows: repeat(7, 1fr);
+    gap: 10px; /* Промежуток между ячейками */
+    width: 95vw;
+    height: 80vh; /* Полная высота экрана для сетки */
+}
+
+.cell {
+    background-color: #ffffff; /* Цвет ячейки */
+    border-radius: 5px; /* Круглые углы */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0); /* Цвет текста */
+    overflow: hidden; /* Скрыть переполнение */
+    font-family: Arial, sans-serif; /* Шрифт */
+    border-bottom: 3px solid #000000; /* Белая граница */
+    border-top: 3px solid #000000; /* Белая граница */
+    font-size: calc(0.4vw + 1vh);  /* Размер шрифта */
+    flex-direction: column; /* Вертикальное расположение дочерних элементов */
+}
+button {
+    background-color: transparent; /* Прозрачный фон для кнопки */
+    border: none; /* Убираем границы */
+    color: #000; /* Цвет текста */
+    width: 100%; /* Ширина 100% */
+    height: 100%; /* Высота 100% */
+    cursor: pointer; /* Указатель при наведении */
+    border-radius: 5px; /* Круглые углы кнопки */
+    text-align: center; /* Центрируем текст */
+   
+    font-size: calc(0.4vw + 1vh);  /* Размер шрифта */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    text-align: center; /* Центрируем текст внутри формулы */
+}
+
+.formula {
+    display: block; /* Позволяет формуле растягиваться по ширине кнопки */
+    font-size: calc(0.4vw + 1vh);  /* Размер шрифта */
+    width: 100%; /* Ширина формулы */
+    height: 100%; /* Высота формулы */
+    overflow: hidden; /* Скрыть переполнение */
+    text-align: center; /* Центрируем текст внутри формулы */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+}
+
+
+.rotate{
+    display: inline-block; /* Делаем элемент строчным блочным, чтобы работал transform */
+    transform: translate(5%, 0%) rotate(270deg); /* Поворачиваем текст на 90 градусов */
+    transform-origin: center; /* Определяем точку поворота для центрирования */
+    white-space: nowrap; /* Запрещаем перенос текста на новую строку */
+    width: auto; /* Автоматическая ширина для уменьшения */
+    height: auto;
+  
+}
+.rotate2 {
+   display: inline-block; /* Делаем элемент строчным блочным, чтобы работал transform */
+   transform: translate(5%, 0%) rotate(270deg); /* Поворачиваем текст на 90 градусов */
+   transform-origin: center; /* Определяем точку поворота для центрирования */
+   white-space: nowrap; /* Запрещаем перенос текста на новую строку */
+   width: auto; /* Автоматическая ширина для уменьшения */
+   height: auto;
+}
+
+.top, .bottom {
+    flex: 1; /* Обе секции занимают равное пространство */
+    display: flex; /* Используем Flexbox для центрирования текста */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+        }
+
+.divider {
+height: 2px; /* Высота линии */
+width: 100%; /* Полная ширина линии */
+border-top: 1px dashed #000000; /* Пунктирная линия */
+margin: 0; /* Убираем отступы */
+}
+
+/*Размеры ячеек*/
+/*Размеры ячеек*/
+/*Размеры ячеек*/
+
+.cell:first-child {
+    grid-column: span 1; /* Захватывает 1 колонки */
+    grid-row: span 2;    /* Захватывает 2 строки */
+   
+    border-left: 3px solid #000000; /* Белая граница */
+}
+.one {
+    grid-column: span 2; /* Захватывает 2 колонки */
+    grid-row: span 2;    /* Захватывает 2 строки */
+    border-left: 3px solid #000000; /* Белая граница */
+    
+}
+
+.two {
+    grid-column: span 2; /* Захватывает 2 колонки */
+    grid-row: span 1;    /* Захватывает 1 строки */
+    border-left: 3px solid #000000; /* Белая граница */
+}
+
+.three{
+    grid-column: span 1; /* Захватывает 1 колонки */
+    grid-row: span 2;    /* Захватывает 2 строки */
+    border-left: 3px solid #000000; /* Белая граница */
+}
+.four{
+    grid-column: span 1; /* Захватывает 2 колонки */
+    grid-row: span 2;    /* Захватывает 1 строки */
+    
+    border-left: 3px solid #000000; /* Белая граница */
+}
+.five{
+    grid-column: span 2; /* Захватывает 1 колонки */
+    grid-row: span 1;    /* Захватывает 2 строки */
+    border-left: 3px solid #000000; /* Белая граница */
+}
+.six{
+    grid-column: span 1; /* Захватывает 1 колонки */
+    grid-row: span 5;    /* Захватывает 2 строки */
+    border-left: 3px solid #000000; /* Белая граница */
+}
+.seven{
+    grid-column: span 2; /* Захватывает 1 колонки */
+    grid-row: span 2;    /* Захватывает 2 строки */
+    border-left: 3px solid #000000; /* Белая граница */
+}
+
+.eaght{
+    grid-column: span 2; /* Захватывает 1 колонки */
+    grid-row: span 1;    /* Захватывает 2 строки */
+    border-left: 3px solid #000000; /* Белая граница */
+}
+
+.nine{
+    grid-column: span 1; /* Захватывает 1 колонки */
+    grid-row: span 4;    /* Захватывает 2 строки */
+    border-left: 3px solid #000000; /* Белая граница */
+}
+
+.ten{
+    grid-column: span 1; /* Захватывает 1 колонки */
+    grid-row: span 2;    /* Захватывает 2 строки */
+    border-left: 3px solid #000000; /* Белая граница */
+}
+.eleven{
+    grid-column: span 2; /* Захватывает 1 колонки */
+    grid-row: span 2;    /* Захватывает 2 строки */
+    border-left: 3px solid #000000; /* Белая граница */
+}
+.twelve{
+    grid-column: span 2; /* Захватывает 1 колонки */
+    grid-row: span 3;    /* Захватывает 2 строки */
+    border-left: 3px solid #000000; /* Белая граница */
+}
+.thirteen{
+    grid-column: span 1; /* Захватывает 1 колонки */
+    grid-row: span 2;    /* Захватывает 2 строки */
+    border-left: 3px solid #000000; /* Белая граница */
+}
+.fourteen{
+    grid-column: span 2; /* Захватывает 1 колонки */
+    grid-row: span 1;    /* Захватывает 2 строки */
+    border-left: 3px solid #000000; /* Белая граница */
+}
+.fifteen{
+    grid-column: span 2; /* Захватывает 1 колонки */
+    grid-row: span 1;    /* Захватывает 2 строки */
+    border-left: 3px solid #000000; /* Белая граница */
+}
+.sixteen:hover{
+   
+        background-color: rgb(221, 221, 221);
+    
+}
+.three:hover{
+   
+    background-color: rgb(221, 221, 221);
+
+}
+
